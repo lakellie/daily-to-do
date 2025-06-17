@@ -138,3 +138,36 @@ function loadListForDate(date) {
   currentTasks = tasks;
   renderTasks(currentTasks);
 }
+
+function setupDragAndDrop() {
+  const items = document.querySelectorAll(".task-item");
+  let draggedItem = null;
+  let draggedIndex = null;
+
+  items.forEach((item) => {
+    item.addEventListener("dragstart", (e) => {
+      draggedItem = item;
+      draggedIndex = parseInt(item.dataset.index);
+      setTimeout(() => {
+        item.classList.add("dragging");
+      }, 0);
+    });
+
+    item.addEventListener("dragend", () => {
+      draggedItem.classList.remove("dragging");
+      draggedItem = null;
+    });
+
+    item.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      const currentIndex = parseInt(item.dataset.index);
+      if (currentIndex !== draggedIndex) {
+        const temp = currentTasks[draggedIndex];
+        currentTasks.splice(draggedIndex, 1);
+        currentTasks.splice(currentIndex, 0, temp);
+        saveTasks(today, currentTasks);
+        renderTasks(currentTasks); // rerender to update indices
+      }
+    });
+  });
+}
