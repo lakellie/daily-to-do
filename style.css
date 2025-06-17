@@ -72,3 +72,13 @@ select {
   cursor: pointer;
   z-index: 1;
 }
+.dragging {
+  opacity: 0.5;
+}
+
+.task-item-placeholder {
+  background: #ddd;
+  height: 48px;
+  margin: 8px 0;
+  border-radius: 4px;
+}
