@@ -49,6 +49,9 @@ button {
   padding: 8px 12px;
   margin-left: 10px;
   -webkit-appearance: none;
+  background-color: #00e6cb;
+  color: white;
+  font-family: "Edu NSW ACT Foundation";
 }
 
 select {
