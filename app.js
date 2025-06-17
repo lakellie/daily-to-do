@@ -3,7 +3,7 @@ const newTaskInput = document.getElementById("new-task");
 const dateEl = document.getElementById("date");
 const pastDatesEl = document.getElementById("past-dates");
 
-const today = new Date().toISOString().split("T")[0];
+const today = new Date().toLocaleDateString().split("T")[0];
 dateEl.textContent = today;
 
 let currentTasks = loadTasks(today);
