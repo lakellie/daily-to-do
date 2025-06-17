@@ -8,14 +8,14 @@
 </head>
 <body>
     <h1>to-do list for <span id="date"></span> 🤍</h1>
-    <input type="text" id="new-task" placeholder="Add a new task" />
-    <button onclick="addTask()">Add</button>
+    <input type="text" id="new-task" placeholder="add a new task" />
+    <button onclick="addTask()">add</button>
 
     <ul id="task-list"></ul>
 
     <h2>view past lists</h2>
     <select id="past-dates" onchange="loadListForDate(this.value)">
-      <option disabled selected>Select a date</option>
+      <option disabled selected>select a date</option>
     </select>
   
   <script src="app.js"></script>
