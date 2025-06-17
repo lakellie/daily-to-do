@@ -10,7 +10,7 @@ h1, h2 {
   text-transform: lowercase;
   font-family: "Edu NSW ACT Foundation";
   font-weight: 700;
-  font-color: white;
+  color: white;
 }
 
 .container {
