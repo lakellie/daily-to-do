@@ -32,7 +32,7 @@ li {
   display: flex;
   align-items: center;
   margin: 8px 0;
-  font-family: "Lora";
+  font-family: "Edu NSW ACT Foundation";
 }
 
 li input[type="checkbox"] {
@@ -43,7 +43,7 @@ input[type="text"] {
   width: 70%;
   padding: 8px;
   max-width: 500px;
-  font-family: "Lora";
+  font-family: "Edu NSW ACT Foundation";
   -webkit-appearance: none;
 }
 
