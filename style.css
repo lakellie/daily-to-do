@@ -6,7 +6,7 @@ body {
   padding: 20px;
 }
 
-h1 {
+h1, h2 {
   text-transform: lowercase;
   font-family: "Edu NSW ACT Foundation";
     font-weight:700;
