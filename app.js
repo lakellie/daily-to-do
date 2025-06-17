@@ -71,7 +71,7 @@ function loadTasks(date) {
 }
 
 function populatePastDates() {
-  pastDatesEl.innerHTML = '<option disabled selected>Select a date</option>';
+  pastDatesEl.innerHTML = '<option disabled selected>view past lists</option>';
   for (let key in localStorage) {
     if (key.startsWith("todo-")) {
       const date = key.slice(5);
