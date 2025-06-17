@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap');
 
 body {
   font-family: sans-serif;
@@ -8,7 +8,8 @@ body {
 
 h1 {
   text-transform: lowercase;
-  font-family: "Edu NSW ACT Hand Pre",
+  font-family: "Edu NSW ACT Foundation";
+    font-weight:700;
 }
 
 .container {
