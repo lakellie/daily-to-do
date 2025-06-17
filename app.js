@@ -47,6 +47,7 @@ function renderTasks(tasks) {
     deleteBtn.style.background = "none";
     deleteBtn.style.border = "none";
     deleteBtn.style.cursor = "pointer";
+    deleteBtn.style.fontSize = ".5em";
 
     li.style.display = "flex";
     li.style.alignItems = "center";
