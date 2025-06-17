@@ -70,6 +70,7 @@ select {
   font-family: "Edu NSW ACT Foundation";
    -webkit-appearance: none;
   font-size: 1.3em;
+  text-align: center;
 }
 
 .task-item {
