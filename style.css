@@ -67,6 +67,7 @@ select {
   color: white;
   font-family: "Edu NSW ACT Foundation";
    -webkit-appearance: none;
+  font-size: 1.1em;
 }
 
 .task-item {
