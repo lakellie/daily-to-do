@@ -171,3 +171,9 @@ function setupDragAndDrop() {
     });
   });
 }
+
+function deleteTask(index) {
+  currentTasks.splice(index, 1);
+  saveTasks(today, currentTasks);
+  renderTasks(currentTasks);
+}
