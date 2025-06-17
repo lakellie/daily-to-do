@@ -34,17 +34,20 @@ li {
 
 li input[type="checkbox"] {
   margin-right: 10px;
+  -webkit-appearance: none;
 }
 
 input[type="text"] {
   width: 70%;
   padding: 8px;
   max-width: 500px;
+  -webkit-appearance: none;
 }
 
 button {
   padding: 8px 12px;
   margin-left: 10px;
+  -webkit-appearance: none;
 }
 
 select {
