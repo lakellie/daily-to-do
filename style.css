@@ -40,6 +40,7 @@ li {
 
 li input[type="checkbox"] {
   margin-right: 10px;
+  accent-color: #00e6cb;
 }
 
 input[type="text"] {
