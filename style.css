@@ -27,6 +27,7 @@ ul {
   list-style-type: none;
   padding-left: 0;
   color: white;
+  width: min(91%, 500px);
 }
 
 li {
