@@ -27,22 +27,86 @@ function toggleTask(index) {
 
 function renderTasks(tasks) {
   taskListEl.innerHTML = "";
+
   tasks.forEach((task, index) => {
     const li = document.createElement("li");
+    li.className = "task-item";
+    li.setAttribute("draggable", "true");
+    li.dataset.index = index;
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.className = "delete-swipe-btn";
+    deleteBtn.textContent = "Delete";
+    deleteBtn.onclick = () => deleteTask(index);
+
+    const content = document.createElement("div");
+    content.className = "task-content";
+
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.checked = task.done;
     checkbox.onchange = () => toggleTask(index);
-    
+
     const span = document.createElement("span");
     span.textContent = task.text;
     if (task.done) span.style.textDecoration = "line-through";
+    span.style.flex = "1";
 
-    li.appendChild(checkbox);
-    li.appendChild(span);
+    content.appendChild(checkbox);
+    content.appendChild(span);
+    li.appendChild(deleteBtn);
+    li.appendChild(content);
     taskListEl.appendChild(li);
+
+    // --- SWIPE TO DELETE ---
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+
+    content.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+    });
+
+    content.addEventListener("touchmove", (e) => {
+      if (!isDragging) return;
+      currentX = e.touches[0].clientX;
+      const deltaX = currentX - startX;
+      if (deltaX < 0) {
+        content.style.transform = `translateX(${deltaX}px)`;
+      }
+    });
+
+    content.addEventListener("touchend", () => {
+      isDragging = false;
+      if (currentX - startX < -60) {
+        content.style.transform = `translateX(-80px)`;
+      } else {
+        content.style.transform = `translateX(0)`;
+      }
+    });
+
+    // --- LONG PRESS TO REORDER ---
+    let pressTimer;
+    content.addEventListener("touchstart", () => {
+      pressTimer = setTimeout(() => {
+        li.draggable = true;
+        li.classList.add("dragging");
+      }, 300);
+    });
+
+    content.addEventListener("touchend", () => {
+      clearTimeout(pressTimer);
+    });
+
+    content.addEventListener("touchmove", () => {
+      clearTimeout(pressTimer); // Cancel if swiping instead of long press
+    });
   });
+
+  setupDragAndDrop();
 }
+
 
 function saveTasks(date, tasks) {
   localStorage.setItem(`todo-${date}`, JSON.stringify(tasks));
