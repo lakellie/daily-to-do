@@ -4,6 +4,10 @@ body {
   padding: 20px;
 }
 
+h1 {
+  text-transform: lowercase;
+}
+
 .container {
   background: white;
   padding: 20px;
