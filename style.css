@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 body {
   font-family: sans-serif;
@@ -31,6 +32,7 @@ li {
   display: flex;
   align-items: center;
   margin: 8px 0;
+  font-family: "Lora";
 }
 
 li input[type="checkbox"] {
@@ -41,6 +43,7 @@ input[type="text"] {
   width: 70%;
   padding: 8px;
   max-width: 500px;
+  font-family: "Lora";
   -webkit-appearance: none;
 }
 
