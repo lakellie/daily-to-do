@@ -7,6 +7,10 @@ body {
   padding: 20px;
 }
 
+ul#tasklist button {
+     filter: hue-rotate(-0.16turn);
+}
+
 h1 {
   text-transform: lowercase;
   font-family: "Edu NSW ACT Foundation";
