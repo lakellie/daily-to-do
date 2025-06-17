@@ -34,6 +34,7 @@ li {
   align-items: center;
   margin: 8px 0;
   font-family: "Edu NSW ACT Foundation";
+  font-size: 1.1em;
 }
 
 li input[type="checkbox"] {
@@ -46,6 +47,7 @@ input[type="text"] {
   max-width: 500px;
   font-family: "Edu NSW ACT Foundation";
   -webkit-appearance: none;
+   font-size: 1.1em;
 }
 
 button {
@@ -55,6 +57,7 @@ button {
   background-color: #00e6cb;
   color: white;
   font-family: "Edu NSW ACT Foundation";
+  font-size: 1.1em;
 }
 
 select {
