@@ -34,7 +34,8 @@ li {
   align-items: center;
   margin: 8px 0;
   font-family: "Edu NSW ACT Foundation";
-  font-size: 1.1em;
+  font-size: 1.4em;
+  line-height: 1.6em;
 }
 
 li input[type="checkbox"] {
